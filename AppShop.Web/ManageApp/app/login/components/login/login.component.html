@@ -1,0 +1,37 @@
+<app-loader></app-loader>
+<div id="login-page" class="container-fluid h-100">
+    <div class="row">
+        <div id="form" class="col d-flex align-items-center">
+            <form id="form-content" class="mx-auto" #f="ngForm" (ngSubmit)="signIn()">
+                <div class="logo text-center">
+                    <img class="mr-2" src="/manage/images/logo.svg">
+                    <span>AppShop<small>admin</small></span>
+                </div>
+
+                <div *ngIf="invalidLogin" class="alert alert-danger">
+                    Přihlášení se nepodařilo. Chybné už. jméno a/nebo heslo.
+                </div>
+
+                <mat-form-field class="w-100">
+                    <input matInput placeholder="Už. jméno" name="username" [(ngModel)]="credentials.username" (focus)="$event.target.select()">
+                </mat-form-field>
+
+                <mat-form-field class="w-100">
+                    <input matInput type="password" placeholder="Heslo" name="password" [(ngModel)]="credentials.password" (focus)="$event.target.select()">
+                </mat-form-field>
+
+                <div class="text-center mt-4">
+                    <button [disabled]="disableReSubmit" type="submit" class="btn btn-red-bordered">Přihlásit se</button>
+                </div>
+            </form>
+        </div>
+        <div id="intro" class="col d-flex align-items-center">
+            <div class="intro-text mx-auto text-center">
+                <img class="mb-4 d-none d-lg-inline" src="/manage/images/info.svg">
+                <h1 class="mb-3 mb-lg-4">Vědeli jste, že?</h1>
+                <p>Nakupujte z pohodlí domova ve webové aplikaci AppShop. Aplikace obsahuje jak prezentační sekci, tak i sekci
+                    pro správu vašeho sortimentu a objednávek..</p>
+            </div>
+        </div>
+    </div>
+</div>

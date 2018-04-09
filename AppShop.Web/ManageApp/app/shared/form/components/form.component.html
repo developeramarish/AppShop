@@ -1,0 +1,13 @@
+<form *ngIf="config && config.boxes.length > 0" [formGroup]="config.form" (ngSubmit)="onSubmit()" class="row">
+    <!-- Content -->
+    <box *ngFor="let box of config.boxes" class="mb-4 {{ box.size }}" [config]="box"></box>
+    <!-- Buttons -->
+    <div class="col-12 mt-2 text-right">
+        <a mat-raised-button *ngIf="config.showCancelButton" routerLink="/{{ backlink }}" class="mr-2">
+            Zrušit
+        </a>
+        <button mat-raised-button class="button-success">
+            Uložit
+        </button> 
+    </div>
+</form>

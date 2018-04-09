@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="home-banner">
+    <div class="container text-center">
+        <img class="logo" src="~/client/images/logo-white.svg"/>
+        <h1>AppShop</h1>
+        <h2>E-commerce cloud application</h2>
+        <p>Nakupujte z pohodlí domova ve webové aplikaci AppShop. Aplikace obsahuje jak prezentační sekci, tak i sekci pro správu vašeho sortimentu a objednávek..</p>
+        <div class="row justify-content-center">
+            <a href="#products" class="btn btn-filled my-2 mx-2">
+                Zobrazit produkty <img src="~/client/images/arrow-down.svg"/>
+            </a>
+            <a href="/admin" class="btn btn-bordered my-2 mx-2">
+                Zobrazit správu <img src="~/client/images/settings.svg"/>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div id="products" class="row">
+        @for(var i = 0; i < 10; i++){
+            <div class="product-item col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
+                <div class="thumbnail">
+                    <img class="mb-4" src="http://placehold.it/400x300/fff/000" alt="" />
+                    <div class="caption">
+                        <h4 class="mb-3">Asymmetrical Neck Ruffle Dress</h4>
+                        <div class="row align-items-center">
+                            <div class="price col-6">
+                                <s>2 299 kč</s>
+                                <strong>1 999 kč</strong>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-primary-bordered float-right" href="#"><i class="fas fa-search mr-2"></i>Zobrazit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

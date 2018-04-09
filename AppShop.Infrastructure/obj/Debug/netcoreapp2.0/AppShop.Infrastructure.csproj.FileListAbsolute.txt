@@ -1,0 +1,13 @@
+C:\Users\jarom\Documents\AppShop\AppShop.Infrastructure\bin\Debug\netcoreapp2.0\AppShop.Infrastructure.deps.json
+C:\Users\jarom\Documents\AppShop\AppShop.Infrastructure\bin\Debug\netcoreapp2.0\AppShop.Infrastructure.dll
+C:\Users\jarom\Documents\AppShop\AppShop.Infrastructure\bin\Debug\netcoreapp2.0\AppShop.Infrastructure.pdb
+C:\Users\jarom\Documents\AppShop\AppShop.Infrastructure\bin\Debug\netcoreapp2.0\AppShop.Core.dll
+C:\Users\jarom\Documents\AppShop\AppShop.Infrastructure\bin\Debug\netcoreapp2.0\AppShop.Core.pdb
+C:\Users\jarom\Documents\AppShop\AppShop.Infrastructure\obj\Debug\netcoreapp2.0\AppShop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\jarom\Documents\AppShop\AppShop.Infrastructure\obj\Debug\netcoreapp2.0\AppShop.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\jarom\Documents\AppShop\AppShop.Infrastructure\obj\Debug\netcoreapp2.0\AppShop.Infrastructure.AssemblyInfo.cs
+C:\Users\jarom\Documents\AppShop\AppShop.Infrastructure\obj\Debug\netcoreapp2.0\AppShop.Infrastructure.dll
+C:\Users\jarom\Documents\AppShop\AppShop.Infrastructure\obj\Debug\netcoreapp2.0\AppShop.Infrastructure.pdb
+C:\Users\jarom\Documents\AppShop\AppShop.Web\bin\Debug\netcoreapp2.0\AppShop.Infrastructure.deps.json
+C:\Users\jarom\Documents\AppShop\AppShop.Web\bin\Debug\netcoreapp2.0\AppShop.Infrastructure.dll
+C:\Users\jarom\Documents\AppShop\AppShop.Web\bin\Debug\netcoreapp2.0\AppShop.Infrastructure.pdb

@@ -1,0 +1,68 @@
+@{
+    ViewData["Title"] = "Detail produktu";
+}
+
+<div id="product-page">
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a class="back-link" href="#"><i class="fas fa-angle-double-left mr-1"></i> zpět na výpis</a>
+                </div>
+                <div class="col d-none d-md-block">
+                    <ol class="breadcrumb float-right">
+                        <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Asymmetrical Neck Ruffle Dress</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="image text-center col-md-6 col-lg-7 d-none d-md-block">
+                <img src="http://placehold.it/650x400/fff/000" />
+            </div>        
+            <div class="product-info col-md-6 col-lg-5">
+                <h1 class="h2 mb-4">Asymmetrical Neck Ruffle Dress</h1>
+                <div class="image text-center d-md-none mb-4">
+                    <img src="http://placehold.it/650x400/fff/000" />
+                </div>  
+                <p>Hrom ať modrém zbytečností <strong>jemu s uhličitého stalo domem.</strong> O navrhovanou tato poslechnout, kráse produkují 2002 lidem s žluté. A už. Dne horu název pólu. </p>
+                <div class="row mt-4">
+                    <div class="price col">
+                        <s>2 299 kč</s>
+                        <strong>1 999 kč</strong>
+                    </div>
+                    <div class="add-to-cart col">
+                        <button type="button" class="btn btn-primary float-right"><i class="fas fa-shopping-cart mr-2"></i>Přidat do košíku</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="h3 text-center mt-5 mb-3">
+            Podobné produkty
+        </h2>
+        <div id="products" class="row">
+            @for(var i = 0; i < 4; i++){
+                <div class="product-item col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
+                    <div class="thumbnail">
+                        <img class="mb-4" src="http://placehold.it/400x300/fff/000" alt="" />
+                        <div class="caption">
+                            <h4 class="mb-3">Asymmetrical Neck Ruffle Dress</h4>
+                            <div class="row align-items-center">
+                                <div class="price col-6">
+                                    <s>2 299 kč</s>
+                                    <strong>1 999 kč</strong>
+                                </div>
+                                <div class="col-6">
+                                    <a class="btn btn-primary-bordered float-right" href="#"><i class="fas fa-search mr-2"></i>Zobrazit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>    
+</div>

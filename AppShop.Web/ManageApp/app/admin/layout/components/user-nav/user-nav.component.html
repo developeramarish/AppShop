@@ -1,0 +1,19 @@
+<div id="user-nav"class="ml-3 d-inline" dropdown placement="bottom right">
+    <a dropdownToggle class="header-nav-btn">
+        <img src="/manage/images/icons/user-setting.svg" height="30" />
+    </a>
+    <div *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+        <li role="menuitem">
+            <a class="dropdown-item">
+                <img src="/manage/images/icons/setting.svg" />
+                Nastavení
+            </a>
+        </li>
+        <li role="menuitem">
+            <a class="dropdown-item" (click)="logout()">
+                <img src="/manage/images/icons/logout.svg" />
+                Odhlásit se
+            </a>
+        </li>
+    </div>
+</div>

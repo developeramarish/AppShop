@@ -1,0 +1,70 @@
+<!-- BUTTONS -->
+<div id="top-buttons" class="mb-2">
+    <a *ngFor="let button of config.buttons" routerLink="{{ button.link }}" class="btn mr-2">
+        <i *ngIf="button.icon" class="{{ button.icon }} mr-2"></i>
+        <span>
+            {{ button.title }}
+        </span>
+    </a>
+</div>
+
+<div *ngIf="data.items" class="table-responsive">
+    <!-- TABLE -->
+    <mat-table id="table-items" 
+        [dataSource]="data.items" 
+        matSort 
+        (matSortChange)="onSortBy($event)"
+        [matSortActive]="query.sortBy" 
+        matSortDirection="asc" 
+        matSortDisableClear>
+
+        <!-- columns -->
+        <ng-container *ngFor="let column of config.columns" [matColumnDef]="column.property">
+            <mat-header-cell n:if="column.isSortable" *matHeaderCellDef [mat-sort-header]="column.property">{{ column.title }}</mat-header-cell>
+            <mat-header-cell n:if="!column.isSortable" *matHeaderCellDef>{{ column.title }}</mat-header-cell>
+            <mat-cell *matCellDef="let item"> 
+                {{ column.prefix }}
+                <span [innerHTML]="item[column.property] | dataFormat: column.type"></span>
+                {{ column.postfix }}
+            </mat-cell>
+        </ng-container>
+
+        <!-- actions -->
+        <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef class="mat-cell-width-auto"></mat-header-cell>
+            <mat-cell *matCellDef="let item" class="mat-cell-width-auto"> 
+                <div *ngFor="let action of config.actions">
+                    <!-- Action as Link -->
+                    <a *ngIf="!action.isEvent" routerLink="{{ action.link }}/{{ item.id }}" 
+                        mat-mini-fab class="mat-mini-fab {{ action.cssClass }}"
+                        matTooltip="{{ action.title }}" matTooltipPosition="above">
+                        <i class="{{ action.icon }}"></i>
+                    </a>
+                    <!-- Action as Event -->
+                    <button *ngIf="action.isEvent" (click)="onEvent(action.link, item)" 
+                        mat-mini-fab class="mat-mini-fab {{ action.cssClass }}"
+                        matTooltip="{{ action.title }}" matTooltipPosition="above">
+                        <i class="{{ action.icon }}"></i>
+                    </button>
+                </div>
+            </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+    </mat-table>
+    <!-- PAGINATOR -->
+    <mat-paginator #paginator
+                 class="mt-3"
+                 [pageSize]="config.limit"
+                 [length]="data.totalItems"
+                 [pageSizeOptions]="[10, 20, 50]"
+                 [showFirstLastButtons]="true"
+                 (page)="onPaginationChange($event)">
+    </mat-paginator>
+    <!-- LOADING OVERLAY -->
+    <div class="loading-overlay" [hidden]="!isLoading">
+        <mat-spinner></mat-spinner>
+    </div>    
+</div>

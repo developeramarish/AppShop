@@ -1,0 +1,92 @@
+.header-nav-btn{
+    cursor: pointer;
+}
+#user-nav, #mobile-nav{
+    .dropdown-item.active, .dropdown-item:active{
+        background-color: #f4f4f4;
+    }
+}
+#user-nav{
+    position: relative;
+    .dropdown-menu{
+        width: 280px;
+        margin-top: 32px;
+        border: 1px solid #efefef;
+        border-radius: 0 !important;
+        background: white;
+        box-shadow: none;
+        padding: 0;
+        li{
+            float: left;
+            width: 50%;
+            &:nth-child(2n){
+                border-left: 1px solid #efefef;
+            }
+            &:nth-child(2+n){
+                border-top: 1px solid #efefef;
+            }
+            a{
+                display: block;
+                text-align: center;
+                padding: 1rem;
+                img{
+                    display: block;
+                    margin: 5px auto 15px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+#mobile-nav{
+    position: relative;
+    .dropdown-menu{
+        width: 230px;
+        margin-top: 32px;
+        border: 1px solid #efefef;
+        border-radius: 0 !important;
+        background: white;
+        box-shadow: none;
+        li{
+            &:not(:last-child){
+                border-bottom: 1px solid #efefef;
+            }
+            a{
+                display: block;
+                position: relative;
+                width: 100%;
+                padding: 0.6rem 2.5rem;
+                padding-left: 4.8rem;
+                color: #333333;
+                img{
+                    position: absolute;
+                    left: 45px;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 25px;
+                }
+                &:hover{
+                    text-decoration: none;
+                }
+                &:not(:last-child):before{
+                    content: "";
+                    position: absolute;
+                    left: 15px;
+                    bottom: 0;
+                    width: calc(100% - 30px);
+                    height: 1px;
+                    background: #eee;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 575px){
+    #user-nav, #mobile-nav{
+        position: initial;
+        .dropdown-menu{
+            margin-top: 25px;
+        }
+    }
+}

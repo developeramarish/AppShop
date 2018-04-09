@@ -1,0 +1,40 @@
+#nav-tab{
+    width: 100%;
+    > ul{
+        list-style: none;
+        width: 100%;
+        height: 75px;
+        > li{
+            &:not(:last-child){
+                margin-right: .3rem;
+            }
+            > a{
+                background: rgba(0,0,0,0.2);
+                padding: 0 2rem;
+                border-radius: 2px 2px 0 0;
+                height: 56px;
+                color:rgba(255, 255, 255, 0.4);
+                transition: 0.3s;
+                img{
+                    display: none;
+                    height: 2rem;
+                    margin-right: 1rem;
+                }
+                &.active{
+                    background: white;
+                    height: auto;
+                    color: #333;
+                    font-weight: 500;
+                    padding: 0rem 2rem;
+                    height: 75px;
+                    img{
+                        display: block;
+                    }
+                }
+                &:hover:not(.active){
+                    height: 65px;
+                }
+            }
+        }
+    }
+}

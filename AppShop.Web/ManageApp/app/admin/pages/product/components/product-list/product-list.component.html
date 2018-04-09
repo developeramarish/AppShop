@@ -1,0 +1,6 @@
+<app-list 
+    [config]="config" 
+    [data]="data" 
+    [isLoading]="isLoading"
+    (onChange)="populateData($event)"
+    (onEvent)="this[$event.name]($event.item, $event.query)"></app-list>

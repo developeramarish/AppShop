@@ -1,0 +1,13 @@
+<div id="mobile-nav"class="ml-3 d-inline" dropdown placement="bottom right">
+    <a dropdownToggle class="header-nav-btn">
+        <img src="/manage/images/icons/menu.svg" height="30" />
+    </a>
+    <div *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+        <li *ngFor="let item of items" role="menuitem">
+            <a routerLink="{{ item.path }}" class="dropdown-item">
+                <img *ngIf="item.icon" src="/manage/images/icons/menu/{{ item.icon }}" />
+                {{ item.title }}
+            </a>
+        </li>
+    </div>
+</div>

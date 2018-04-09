@@ -1,0 +1,36 @@
+::selection {
+    background-color: #a68bdb;
+    color: #fff;
+}
+::-moz-selection {
+    background-color: #a68bdb;
+    color: #fff;
+}
+::-o-selection {
+    background-color: #a68bdb;
+    color: #fff;
+}
+::-ms-selection {
+    background-color: #a68bdb;
+    color: #fff;
+}
+::-webkit-selection {
+    background-color: #a68bdb;
+    color: #fff;
+}
+html, body{
+    height: 100%;
+}
+body{
+    font-size: 16px;
+    background: white;
+    font-family: $font-roboto;
+}
+#login-page{
+    min-height: 100%;
+}
+@media(min-width: 992px){
+    #login-page > .row{
+        height: 100%;
+    }
+}

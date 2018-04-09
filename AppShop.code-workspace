@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "AppShop.Core"
+        },
+        {
+            "path": "AppShop.Infrastructure"
+        },
+        {
+            "path": "AppShop.Web"
+        }
+    ]
+}

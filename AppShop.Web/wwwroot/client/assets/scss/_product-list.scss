@@ -1,0 +1,23 @@
+#products{
+    .product-item{
+        .thumbnail {
+            background: white;
+            padding: 1.6rem;
+            h4 {
+                font-size: 0.9rem;
+            }
+            .price{
+                font-family: $font-mina;
+                strong {
+                    color: green;
+                }
+                s{
+                    display: block;
+                    color: #666;
+                    font-size: 0.8rem;
+                    line-height: 0.7rem;
+                }
+            }
+        }
+    }
+}

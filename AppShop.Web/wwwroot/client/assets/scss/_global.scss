@@ -1,0 +1,71 @@
+body {
+    font-size: 16px;
+    font-family: $font-roboto;
+    background: $light;
+}
+
+img {
+    max-width: 100%;
+}
+
+a, a:hover{
+    color: $purple;
+}
+
+.btn-primary{ 
+    background: $red;
+    border-color: transparent;
+    &:hover {
+        background: $red-hover;  
+        border-color: transparent;
+    }
+}
+
+.btn-primary-bordered{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.7rem;
+    background: transparent;
+    color: $red;
+    border: 2px solid $red;
+    &:hover{
+        color: white;
+        background: $red;
+    }
+}
+
+.form-control{
+    border: 1px solid #dedede;
+}
+
+.page-header{
+    padding: 2rem 0;
+    color: white;
+    background: $purple url(/client/images/home-banner-bg.png) repeat;
+    .breadcrumb{
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        a, span, li.active{
+            color: white;
+            font-weight: 500;
+        }
+        .breadcrumb-item+.breadcrumb-item::before{
+            color: $red;
+        }
+    }
+    .back-link{
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+}
+
+.nicescroll-rails{
+    width: 4px!important;
+}
+
+.nicescroll-cursors{
+    margin-right: -1px!important;
+    background-color: $red!important;
+}

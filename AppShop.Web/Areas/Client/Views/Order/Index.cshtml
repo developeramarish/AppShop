@@ -1,0 +1,190 @@
+@{
+    ViewData["Title"] = "Objednávka";
+}
+
+<div id="order-page">
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a class="back-link" href="#"><i class="fas fa-angle-double-left mr-1"></i> zpět na výpis</a>
+                </div>
+                <div class="col d-none d-md-block">
+                    <ol class="breadcrumb float-right">
+                        <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Objednávka</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <h1 class="h2 mb-4 text-center">Vytvoření objednávky</h1>
+        <div class="row">
+            <div id="order-proccess" class="col-md-6 mb-4">
+                <h2 class="h4 mt-2 mb-4">Nákupní proces</h2>
+                <nav class="nav nav-pills nav-justified">
+                    <a class="nav-item nav-link active" data-toggle="tab" href="#personal-info" role="tab">
+                        <i class="far fa-user-circle"></i>
+                        <span>1.Vyplňtě údaje</span>
+                    </a>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#shipping-type">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>2. Vyberte dopravu</span>
+                    </a>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#payment-type">
+                        <i class="far fa-credit-card"></i>
+                        <span>3. Vyberte platbu</span>
+                    </a>
+                </nav>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active p-4" id="personal-info">
+                        <div class="row">
+                            <div class="form-group col-sm-6 required">
+                                <label for="name">Jméno:</label>
+                                <input type="text" id="name" class="form-control" name="name" />
+                            </div>
+                            <div class="form-group col-sm-6 required">
+                                <label for="surname">Příjmení:</label>
+                                <input type="text" id="surname" class="form-control" name="surname" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6 required">
+                                <label for="email">E-mail:</label>
+                                <input type="text" id="email" class="form-control" name="email" />
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="phone">Telefon:</label>
+                                <input type="text" id="phone" class="form-control" name="phone" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-8 required">
+                                <label for="street">Ulice a č.p.:</label>
+                                <input type="text" id="street" class="form-control" name="street" />
+                            </div>
+                            <div class="form-group col-sm-4 required">
+                                <label for="city">PSČ:</label>
+                                <input type="text" id="city" class="form-control" name="city" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6 required">
+                                <label for="city">Město:</label>
+                                <input type="text" id="city" class="form-control" name="city" />
+                            </div>
+                            <div class="form-group col-sm-6 required">
+                                <label for="state">Stát:</label>
+                                <select id="state" class="form-control" name="state">
+                                    <option value="cr">Česká republika</option>
+                                    <option value="sk">Slovensko</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade p-4" id="shipping-type">
+                        <label>
+                            <input type="radio" name="shipping" value="cp" />
+                            <table>
+                                <tr>
+                                    <td class="image"><img src="~/client/images/ceska-posta.svg" /></td>
+                                    <td class="name">
+                                        Česká pošta - balík do ruky
+                                        <small>Doba doručení 2-3 pracovní dny</small>
+                                    </td>
+                                    <td class="price text-right">+ 99 kč</td>
+                                </tr>
+                            </table>
+                        </label>
+                        <label>
+                            <input type="radio" name="shipping" value="ppl" />
+                            <table>
+                                <tr>
+                                    <td class="image"><img src="~/client/images/gls.svg" /></td>
+                                    <td class="name">
+                                        GLS
+                                        <small>Doba doručení 1-2 pracovní dny</small>
+                                    </td>
+                                    <td class="price text-right">+ 79 kč</td>
+                                </tr>
+                            </table>
+                        </label>
+                    </div>
+                    <div class="tab-pane fade p-4" id="payment-type">
+                        <label>
+                            <input type="radio" name="payment" value="cod" />
+                            <table>
+                                <tr>
+                                    <td class="image"><img src="~/client/images/cash-on-delivery.svg" /></td>
+                                    <td class="name">
+                                        Dobírka
+                                        <small>Zboží odesíláme ihned.</small>
+                                    </td>
+                                    <td class="price text-right">+ 20 kč</td>
+                                </tr>
+                            </table>
+                        </label>
+                        <label>
+                            <input type="radio" name="payment" value="bank" />
+                            <table>
+                                <tr>
+                                    <td class="image"><img src="~/client/images/bank-transfer.svg" /></td>
+                                    <td class="name">
+                                        Bankovní převod
+                                        <small>Zboží bude odesláno po připsání peněz.</small>
+                                    </td>
+                                    <td class="price text-right">+ 0 kč</td>
+                                </tr>
+                            </table>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="h4 mt-2 mb-4">Přehled vašeho košíku</h2>
+                <div id="cart">
+                    <table id="cart-products">
+                        <tr>
+                            <td class="image">
+                                <img class="rounded-circle" src="http://placehold.it/70x70/000/fff" />
+                            </td>
+                            <td class="name">Asymmetrical Neck Ruffle Dress</td>
+                            <td class="price text-right">1 999 kč x 3 ks<strong>5 994 kč</strong></td>
+                            <td class="delete"><i class="fas fa-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="image">
+                                <img class="rounded-circle" src="http://placehold.it/70x70/000/fff" />
+                            </td>
+                            <td class="name">Asymmetrical Neck Ruffle Dress</td>
+                            <td class="price text-right">1 999 kč x 1 ks<strong>1 999 kč</strong></td>
+                            <td class="delete"><i class="fas fa-trash"></i></td>
+                        </tr>
+                    </table>
+                    <table id="cart-total" class="text-right">
+                        <tr class="items">
+                            <td>Celkem za zboží:</td>
+                            <td>5 994 kč</td>
+                        </tr>
+                        <tr class="shipping">
+                            <td>Doprava - Česká pošta:</td>
+                            <td>99 kč</td>
+                        </tr>
+                        <tr class="payment">
+                            <td>Platba - Dobírka:</td>
+                            <td>20 kč</td>
+                        </tr>
+                        <tr class="total">
+                            <td>Celkem k úhradě:</td>
+                            <td>6 113 kč</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="mt-5 col-12 text-center">
+                <button type="button" class="btn btn-primary-bordered"><i class="fas fa-check mr-2"></i>Dokončit objednávku</button>
+            </div>
+        </div>
+    </div>
+</div>

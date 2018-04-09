@@ -1,0 +1,16 @@
+<nav id="nav-tab" class="d-none d-lg-block">
+    <ul class="nav nav-pills">
+        <li *ngFor="let item of items" class="nav-item d-flex align-items-end">
+            <a *ngIf="item.path == '/admin'" routerLink="{{ item.path }}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                class="nav-link d-flex align-items-center">
+                <img *ngIf="item.icon" src="/manage/images/icons/menu/{{ item.icon }}" />
+                {{ item.title }}
+            </a>
+            <a *ngIf="item.path != '/admin'" routerLink="{{ item.path }}" routerLinkActive="active"
+                class="nav-link d-flex align-items-center">
+                <img *ngIf="item.icon" src="/manage/images/icons/menu/{{ item.icon }}" />
+                {{ item.title }} 
+            </a>
+        </li>
+    </ul>
+</nav>

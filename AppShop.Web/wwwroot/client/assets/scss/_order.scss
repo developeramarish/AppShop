@@ -1,0 +1,149 @@
+#order-page{
+    .nav-link{
+        border-radius: 0;
+        color: #666;
+        &.active{
+            background: #fff;
+            color: $red;
+        }
+        svg{
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+        span{
+            display: block;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+    }
+    .tab-content{
+        background: white;
+    }
+    button.btn-primary-bordered{
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    #order-proccess{ 
+        #personal-info{
+            .form-group{
+                &.required{
+                    label:after{
+                        content: "*";
+                        margin-left: 0.3rem;
+                        color: $red;
+                    }
+                }
+            }
+        }
+        #shipping-type, #payment-type{
+            label{
+                position: relative;
+                padding-left: 3rem;
+                width: 100%;
+                cursor: pointer;
+                input[type=radio]{
+                    position: absolute;
+                    left: 0.5rem;
+                    top: 50%;
+                    transform: translateY(-50%); 
+                }
+                table{
+                    width: 100%;
+                    tr{
+                        td{
+                            padding: 1rem;
+                            &.image{
+                                width: calc(40px + 2rem);
+                                white-space: nowrap;
+                            }
+                            &.name{
+                                line-height: 1.2rem;
+                                small{
+                                    margin-top: 0.3rem;
+                                    display: block;
+                                }
+                            }
+                            &.price{
+                                width: 1%;
+                                white-space: nowrap;
+                                color: #15b912;
+                                font-weight: 700;
+                                font-family: $font-mina;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #cart{
+        #cart-products{
+            border-collapse: separate;
+            margin-top: -20px;
+            border-spacing: 0px 20px;
+            width: 100%;
+            tr{
+                background: white;
+                td{
+                    padding: 1rem;
+                    &.image{
+                        padding: 1rem 0.5rem 1rem 1rem;
+                        text-align: center;
+                        width: calc(70px + 1rem);
+                        img{
+                            width: 70px!important;
+                        }
+                    }
+                    &.name{
+                        line-height: 1.2rem;
+                    }
+                    &.price{
+                        font-family: $font-mina;
+                        white-space: nowrap;
+                        font-size: 0.9rem;
+                        strong{
+                            display: block;
+                            font-size: 1rem;
+                            color: #15b912;
+                        }
+                    }
+                    &.delete{
+                        color: $red;
+                        width: 1%;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+        #cart-total{
+            width: 100%;
+            tr{
+                td{
+                    padding: 0.3rem 0;
+                    &:first-child{
+                        font-size: 0.9rem;
+                    }
+                    &:last-child{
+                        font-weight: 700;
+                        white-space: nowrap;
+                        width: 1%;
+                        padding-left: 2rem;
+                        font-family: $font-mina;
+                    }
+                }
+                &:last-child{
+                    td{
+                        &:first-child{
+                            font-weight: 500;
+                            font-size: 1rem;
+                        }
+                        &:last-child{
+                            color: #15b912;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

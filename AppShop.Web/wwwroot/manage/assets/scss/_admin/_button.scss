@@ -1,0 +1,32 @@
+.mat-button, 
+.mat-fab, 
+.mat-icon-button, 
+.mat-mini-fab, 
+.mat-raised-button{
+    // Rounding
+    &.button-rounded{
+        border-radius: 50px;
+    }
+    
+    // Colorize
+    &.button-purple{
+        color: white;
+        background: $purple;
+    }    
+    &.button-success{
+        color: white;
+        background: $success;
+    }
+    &.button-warning{
+        color: white;
+        background: $warning;
+    }
+    &.button-info{
+        color: white;
+        background: $info;
+    }
+    &.button-danger{
+        color: white;
+        background: $danger;
+    }
+}

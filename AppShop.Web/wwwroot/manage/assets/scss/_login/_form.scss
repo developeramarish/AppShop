@@ -1,0 +1,75 @@
+#form{
+    flex: 0 0 700px;
+    padding: 4rem 15px;
+    #form-content{
+        width: 300px;
+        max-width: 100%;
+        h2{
+            color: #333;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+        }
+        .logo{
+            margin-bottom: 2rem;
+            img{
+                height: 55px;
+            }
+            span{
+                position: relative;
+                top: 2px;
+                font-family: $font-mina;
+                font-size: 1.7rem;
+                font-weight: 700;
+                color: #333;
+                small {
+                    position: absolute;
+                    background: $red;
+                    color: #fff;
+                    border-radius: 20px;
+                    padding: 0 0.4rem;
+                    text-transform: uppercase;
+                    font-size: 0.65rem;
+                    right: -10px;
+                    top: -8px;
+                    font-weight: 700;
+                    letter-spacing: 0.01rem;
+                    height: 0.9rem;
+                    line-height: 1.1rem;
+                }
+            }
+        }
+        .btn.btn-red-bordered{
+            padding: 0.8rem 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.8px;
+            color: white;
+            background: $red;
+            border: 2px solid transparent;
+            border-radius: 25px;
+            &:hover{
+                background: #e00a40;
+            }
+        }
+        .mat-form-field-underline {
+            background-color: #ddd;
+        }
+    }
+}
+@media(max-width: 1200px){
+    #form{
+        flex: 0 0 500px;
+    }
+}
+@media(max-width: 991px){
+    #form{
+        flex: 0 0 100%;
+        order: 2;
+        #form-content{
+            width: 280px;
+        }
+    }
+}

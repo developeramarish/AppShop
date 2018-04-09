@@ -1,0 +1,5 @@
+<i *ngIf="icon" class="notify-icon {{ icon }}"></i>
+<div [innerHtml]="content"></div>
+<span class="notify-close-icon" (click)="close()">
+    <i class="fas fa-times"></i>
+</span>

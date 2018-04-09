@@ -1,0 +1,77 @@
+app-list {
+    .table-responsive{
+        position: relative;
+    }
+    #top-buttons {
+        .btn {
+            color: #333;
+            padding: 0.5rem 1.2rem;
+            border-color: #ddd;
+            i {
+                font-size: 2rem;
+            }
+            span {
+                font-size: 0.77rem;
+                text-transform: uppercase;
+                font-weight: 500;
+                position: relative;
+                bottom: 0.5px;
+            }
+            &:hover {
+                background: #f9f9f9;
+            }
+        }
+    }
+    #table-items{
+        &.mat-table {
+            display: table;
+            width: 100%;
+            .mat-cell-width-auto{
+                width: 1%;
+                white-space: nowrap;
+            }
+            > .mat-header-row, > .mat-row {
+                display: table-row;
+                padding: 0;
+                border: none;
+                > .mat-header-cell, > .mat-cell {
+                    display: table-cell;
+                    height: 48px;
+                    vertical-align: middle;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    &.mat-column-actions {
+                        vertical-align: middle;
+                        > div {
+                            display: inline;
+                            .mat-mini-fab{
+                                width: 36px;
+                                height: 36px;
+                                line-height: 32px;
+                                .mat-button-wrapper{
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mat-paginator {
+        font-size: 0.85rem;
+    }
+    .loading-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 77px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.15);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

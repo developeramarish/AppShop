@@ -1,0 +1,136 @@
+#footer{
+    #footer-top{
+        background: white;
+        color: #666;
+        box-shadow: 0 0 12px -6px rgba(0,0,0,0.2);
+        padding: 10px 0;
+        font-size: 0.95rem;
+        line-height: 1.6rem;
+        h5{
+            margin-bottom: 2rem;
+            color: #333;
+            font-family: $font-mina;
+        }
+        strong{
+            color: #333;
+        }
+        .about{
+            p{
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                padding-left: 90px;
+                position: relative;
+            }
+        }
+        .technologies{
+            position: relative;
+            &:before{
+                content: "";
+                z-index: 50;
+                width: calc(100% - 8px);
+                height: 4rem;
+                background: -moz-linear-gradient(top, rgba(125,185,232,0) 0%, rgba(255,255,255,0.77) 58%, #fff 100%);
+                background: -webkit-linear-gradient(top, rgba(125,185,232,0) 0%, rgba(255,255,255,0.77) 58%, #fff 100%);
+                background: linear-gradient(to bottom, rgba(125,185,232,0) 0%, rgba(255,255,255,0.77) 58%, #fff 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#ffffff',GradientType=0 );
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+            &:after{
+                content: "...";
+                width: 35px;
+                height: 15px;
+                background: white;
+                border: 1px solid #e4e4e4;
+                position: absolute;
+                left: 50%;
+                bottom: 5px;
+                transform: translateX(-50%);
+                border-radius: 8px;
+                z-index: 60;
+                line-height: 6px;
+                font-weight: bold;
+                text-align: center;
+                color: #999;
+            }
+            .nicescroll{
+                position: relative;
+                height: 100px;
+                overflow: hidden;
+                ul{
+                    padding: 0 1.2rem 0.3rem 0;
+                    margin: 0;
+                    list-style: none;
+                    li{
+                        position: relative;
+                        padding-left: 1.5rem;
+                        &:before{
+                            content: "";
+                            width: 4px;
+                            height: 4px;
+                            background: $red;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 0;
+                            top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .socials{
+            font-size: 1.8rem;
+            svg{
+                margin-right: 0.4rem;
+                &.fa-facebook-square{
+                    color: #3b5998;
+                }
+                &.fa-linkedin{
+                    color: #007bb6;
+                }
+                &.fa-skype{
+                    color: #00b0f0;
+                }
+                &.fa-github-square{
+                    color: #f05033;
+                }
+            }
+        }
+    }
+    #footer-bottom{
+        background: white;
+        padding: 2rem 0 1.8rem;
+        border-bottom: 5px solid $red;
+        border-top: 1px solid #eee;
+        .links{
+            a{
+                font-size: 0.9rem;
+                color: #666;
+            }
+        }
+        .logo{
+            text-decoration: none;
+            img{
+                height: 36px;
+            }
+            span{
+                position: relative;
+                top: 2px;
+                font-family: $font-mina;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #333;
+                margin-left: 15px;
+                text-decoration: none;
+            }
+        }
+        .copy{
+            color: #666;
+            font-size: 0.85rem;
+        }
+    }
+}

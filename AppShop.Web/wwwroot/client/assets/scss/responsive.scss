@@ -1,0 +1,42 @@
+@media(max-width: 767px){
+    #home-banner{
+        padding: 3rem 0;
+    }
+    .page-header{
+        padding: 0;
+        .back-link{
+            display: block;
+            padding: 1.5rem 0;
+        }
+    }
+    #order-page{
+        #order-proccess{
+            #shipping-type, #payment-type{
+                label{
+                    padding-left: 1.8rem;
+                    table tr{
+                        td{
+                            &.image{
+                                display: none;
+                            }
+                            &.name{
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+        #cart{
+            #cart-products{
+                tr{
+                    td{
+                        &.image{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

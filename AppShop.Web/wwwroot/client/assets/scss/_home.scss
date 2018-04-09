@@ -1,0 +1,56 @@
+#home-banner {
+    position: relative;
+    z-index: 50;
+    padding: 6rem 0;
+    color: white;
+    background: $purple url(/client/images/home-banner-bg.png) repeat;
+    background-size: 400px;
+    img.logo {
+        height: 40px;
+        margin-bottom: 1rem;
+    }
+    h1 {
+        text-transform: uppercase;
+        font-family: $font-mina;
+    }
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+    p {
+        display: block;
+        margin: 0 auto 2rem;
+        max-width: 600px;
+    }
+    .btn {
+        padding: 0.9rem 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.8px;
+        color: white;
+    }
+    .btn.btn-filled {
+        background: $red;
+        border: 2px solid transparent;
+        img {
+            max-width: 14px;
+            margin-left: 10px;
+            margin-top: -2px;
+        }
+        &:hover {
+            background: $red-hover;
+        }
+    }
+    .btn.btn-bordered {
+        background: transparent;
+        border: 2px solid white;
+        img {
+            max-width: 20px;
+            margin-left: 10px;
+            margin-top: -3px;
+        }
+        &:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+    }
+}

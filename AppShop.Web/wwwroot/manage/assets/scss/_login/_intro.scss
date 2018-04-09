@@ -1,0 +1,35 @@
+#intro{
+    background: $purple url(/manage/images/home-banner-bg.png) repeat;
+    background-size: 400px;
+    color: white;
+    padding: 2rem 15px;
+    .intro-text{
+        max-width: 500px;
+        h1{
+            font-family: $font-mina;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+        img{
+            height: 60px;
+        }
+    }
+}
+@media(max-width: 991px){
+    #intro{
+        order: 1;
+        .intro-text{
+            h1{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 0.8rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media(max-width: 576px){
+    #intro{
+    }
+}
